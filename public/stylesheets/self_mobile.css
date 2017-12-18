@@ -1,0 +1,41 @@
+.self_content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+  height: 58vw;
+}
+.self_content .com {
+  height: 40vw;
+  width: 40vw;
+  margin: 0 auto;
+  transition: all .8s;
+  cursor: pointer;
+}
+.self_content .com div {
+  height: 25vw;
+  width: 25vw;
+  margin: 3vw auto;
+}
+.self_content .com div.my_message {
+  background: url(../images/my_message.png);
+  background-size: 100% 100%;
+}
+.self_content .com div.my_class {
+  background: url(../images/my_class.png);
+  background-size: 100% 100%;
+}
+.self_content .com div.my_post {
+  background: url(../images/my_post.png);
+  background-size: 100% 100%;
+}
+.self_content .com:hover {
+  box-shadow: 1vw 1vw 0.9vw 0.4vw rgba(0, 0, 0, 0.5), -0.3vw -0.3vw 0.8vw 0.8vw rgba(0, 0, 0, 0.5);
+}
+.self_content .com h2 {
+  margin: 0 auto;
+  font-size: 4vw;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+}

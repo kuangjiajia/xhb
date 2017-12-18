@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" media="screen and (min-width:500px)" href="./stylesheets/common.css"  type="text/css" />
+    <link rel="stylesheet" media="screen and (max-width:500px)" href="./stylesheets/common_mobile.css"  type="text/css" />
+    <script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+    <script src="./javascripts/jquery.js"></script>
+</head>
+<body>
+    <content>
+        <script src="./javascripts/initLeanCloud.js"></script>
+        <script src="./javascripts/common.js"></script>
+        <div class="content">
+            <div class="content_empty">
+                <div class="nav_left">
+                        <div class="user_mes">
+                            <img src="" alt="" class="xx_user">
+                            <h3 class="user__name"><i class="name_icon"></i><span></span></h3>
+                            <h3 class="stu__id"><i class="id_icon"></i><span></span></h3>
+                            <h3 class="stu__class"><i class="class_icon"></i><span></span></h3>
+                            <div></div>
+                        </div>
+                        <ul class="nav_list">
+                            <a href="/self">
+                                <i class="self_img"></i>个人中心
+                            </a>
+                            <a href="/homework">
+                                <i class="my_homework"></i>我的作业
+                            </a>
+                            <a href="/notice">
+                                <i class="class_notice"></i>班级通知
+                            </a>
+                            <a href="/announce">
+                                <i class="announce"></i>发布通知
+                            </a>
+                        </ul>
+                        <button class="exit"><i class="exit_log"></i>退出登录</button>
+                    </div>
+            </div>
+            <div class="content_index">
+                    <%- body %>
+            </div>
+        </div>
+    </content>
+</body>
+<script src="./javascripts/common.js"></script>
+<script>
+    window.currentUser = AV.User.current();
+    var users = document.querySelector(".xx_user");
+    var userName = document.querySelector(".user__name span");
+    var userId = document.querySelector(".stu__id span");
+    var userClass = document.querySelector(".stu__class span");
+    console.log(currentUser);
+    var attr = currentUser.attributes;
+    users.src = attr.avatar.attributes.url;
+    userName.innerHTML = attr.user_name || '';
+    userId.innerHTML = attr.user_Id || '';
+    userClass.innerHTML = attr.user_class || '';
+
+</script>
+</html>

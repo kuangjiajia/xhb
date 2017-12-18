@@ -1,0 +1,88 @@
+html{
+    -webkit-text-size-adjust:none;
+    font-size: 1vw;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(top left,#5e8abb, #83b6ed); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(top left,#5e8abb, #83b6ed); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(top left,#5e8abb, #83b6ed); /* Firefox 3.6 - 15 */
+    background: linear-gradient(top left,#5e8abb, #83b6ed); /* 标准的语法 */
+}
+
+content{
+    display: block;
+    width: 25vw;
+    height: 40vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background-color: #ececec;
+    box-shadow: 1vw 1vw 0.9vw 0.4vw rgba(0,0,0,.1),
+    -0.3vw -0.3vw 0.8vw 0.8vw rgba(0,0,0,.1);
+    transition: all .8s;
+    &:hover{
+    box-shadow: 1vw 1vw 0.9vw 0.4vw rgba(0,0,0,.3),
+            -0.3vw -0.3vw 0.8vw 0.8vw rgba(0,0,0,.3);
+    }
+    .logo{
+        position: relative;
+        width: 7vw;
+        height: 7vw;
+        border-radius: 7vw;
+        background-color: orange;
+        margin: -3vw auto 0 auto;
+    }
+    .login{
+        margin: 1vw 0;
+        font-size: 2vw;
+        font-weight: normal;
+        text-align: center;
+    }
+    .inputs{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 20vw;
+        div{
+            width: 80%;
+            height: 3.5vw;
+            input{
+                display: block;
+                width: 90%;
+                height: 100%;
+                padding-left: 2vw;
+                background-color: rgba(0,0,0,.1);
+                outline: none;
+                border: none;
+                border-radius: 0.8vw;
+                font-size: 1.5vw;
+            }
+            button{
+                width: 100%;
+                height: 100%;
+                background-color: #4591fb;
+                border-radius: 0.8vw;
+                outline: none;
+                border: none;
+                font-size: 1.4vw;
+                color: white;
+                cursor: pointer;
+            }
+        }
+    }
+    .forget{
+        display: block;
+        font-size: 1.4vw;
+        text-align: center;
+        text-decoration: none;
+        color: #f47149;
+        margin: 1vw auto;
+    }
+}

@@ -1,0 +1,144 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: 'Microsoft YaHei','Lantinghei SC','Open Sans',Arial,'Hiragino Sans GB','STHeiti','WenQuanYi Micro Hei','SimSun',sans-serif;
+}
+content{
+    display: block;
+    width: 100vw;
+    .content{
+        width: 100%;
+        height: 100vh;
+        .content_index{
+            float: left;
+            width: 65vw;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            background-color: #1c4472;
+        }
+        .content_empty{
+            float: left;
+            width: 35vw;
+            height: 100vh;
+            .nav_left{
+                position: fixed;
+                width: 35vw;
+                padding-top: 2vw;
+                height: 100%;
+                background-color: #0a1e33; 
+                .user_mes{
+                    width: 100%;
+                    img{
+                        display: block;
+                        margin: 0 auto;
+                        width: 16vw;
+                        height: 16vw;
+                        border-radius: 16vw;
+                    }
+                    h3{
+                        width: 25vw;
+                        margin: 3vw auto;
+                        font-size: 2vw;
+                        color: rgba(255,255,255,.6);
+                        font-weight: normal;
+                        i{
+                            display: inline-block;
+                            width: 3vw;
+                            height: 3vw;
+                            background-color: red;
+                            margin-right: 2vw;
+                            &.name_icon{
+                                background: url(../images/stu_name.png) no-repeat;
+                                background-size: 100% 100%;
+                            }
+                            &.id_icon{
+                                background: url(../images/stu_id.png) no-repeat;
+                                background-size: 100% 100%;
+                            }
+                            &.class_icon{
+                                background: url(../images/stu_class.png) no-repeat;
+                                background-size: 100% 100%;
+                            }
+                        }
+                    }
+                }
+                .nav_list{
+                    list-style: none;
+                    width: 100%;
+                    a{
+                      box-sizing: border-box;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      width: 100%;
+                      line-height: 16vw;
+                      height: 16vw;
+                      background-color: #091829;
+                      text-decoration: none;
+                      opacity: 1;
+                      border-bottom: 0.01vw solid black;
+                      color: rgba(255,255,255,.6);
+                      font-size: 4vw;
+                      text-align: center;
+                      transition: all .8s;
+                      cursor: pointer;
+                      &:hover{
+                          opacity: .4;
+                      }
+                        i{
+                            display: block;
+                            width: 1.7vw;
+                            height: 1.7vw;
+                            margin-right: 1vw;
+                            &.self_img{
+                                background: url(../images/self_center.png) no-repeat;
+                                background-size: 100% 100%;
+                            }
+                            &.my_homework{
+                                background: url(../images/my_homework.png) no-repeat;
+                                background-size: 100% 100%;
+                            }
+                            &.class_notice{
+                                background: url(../images/class_notice.png) no-repeat;
+                                background-size: 100% 100%;   
+                            }
+                            &.announce{
+                                background: url(../images/announce.png) no-repeat;
+                                background-size: 100% 100%;    
+                            }
+                        }
+                    }
+                }
+                .exit{
+                    box-sizing: border-box;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 12vw;
+                    margin-top: 12vw;
+                    background-color: #091829;
+                    border: none;
+                    outline: none;
+                    font-size: 4vw;
+                    color: rgba(255,255,255,.6);
+                    transition: all .8s;
+                    .exit_log{
+                        display: block;
+                        width: 4vw;
+                        height: 4vw;
+                        margin-right: 1vw;
+                        background: url(../images/exit.png) no-repeat;
+                        background-size: 100% 100%;   
+                    }
+                    &:hover{
+                        opacity: .4;
+                    }
+                }
+            }
+        }
+    }    
+}

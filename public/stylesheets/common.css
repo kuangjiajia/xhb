@@ -1,0 +1,142 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: 'Microsoft YaHei', 'Lantinghei SC', 'Open Sans', Arial, 'Hiragino Sans GB', 'STHeiti', 'WenQuanYi Micro Hei', 'SimSun', sans-serif;
+}
+content {
+  display: block;
+  width: 100vw;
+}
+content .nav_left {
+  position: fixed;
+  width: 22.5vw;
+  padding-top: 2vw;
+  height: 100%;
+  background-color: #0a1e33;
+}
+content .nav_left .user_mes {
+  width: 100%;
+  height: 20vw;
+}
+content .nav_left .user_mes img {
+  display: block;
+  margin: 0 auto;
+  width: 8vw;
+  height: 8vw;
+  border-radius: 8vw;
+}
+content .nav_left .user_mes h3 {
+  width: 16vw;
+  margin: 1.3vw auto;
+  font-size: 1.2vw;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: normal;
+}
+content .nav_left .user_mes h3 i {
+  display: inline-block;
+  width: 1.5vw;
+  height: 1.5vw;
+  background-color: red;
+  margin-right: 2vw;
+}
+content .nav_left .user_mes h3 i.name_icon {
+  background: url(../images/stu_name.png) no-repeat;
+  background-size: 100% 100%;
+}
+content .nav_left .user_mes h3 i.id_icon {
+  background: url(../images/stu_id.png) no-repeat;
+  background-size: 100% 100%;
+}
+content .nav_left .user_mes h3 i.class_icon {
+  background: url(../images/stu_class.png) no-repeat;
+  background-size: 100% 100%;
+}
+content .nav_left .nav_list {
+  list-style: none;
+  width: 100%;
+  height: 28vw;
+}
+content .nav_left .nav_list a {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  line-height: 6vw;
+  height: 6vw;
+  background-color: #091829;
+  text-decoration: none;
+  opacity: 1;
+  border-bottom: 0.01vw solid black;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.2vw;
+  text-align: center;
+  transition: all .8s;
+  cursor: pointer;
+}
+content .nav_left .nav_list a:hover {
+  opacity: .4;
+}
+content .nav_left .nav_list a i {
+  display: block;
+  width: 1.7vw;
+  height: 1.7vw;
+  margin-right: 1vw;
+}
+content .nav_left .nav_list a i.self_img {
+  background: url(../images/self_center.png) no-repeat;
+  background-size: 100% 100%;
+}
+content .nav_left .nav_list a i.my_homework {
+  background: url(../images/my_homework.png) no-repeat;
+  background-size: 100% 100%;
+}
+content .nav_left .nav_list a i.class_notice {
+  background: url(../images/class_notice.png) no-repeat;
+  background-size: 100% 100%;
+}
+content .nav_left .nav_list a i.announce {
+  background: url(../images/announce.png) no-repeat;
+  background-size: 100% 100%;
+}
+content .nav_left .exit {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 4.5vw;
+  background-color: #091829;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.3vw;
+  color: rgba(255, 255, 255, 0.6);
+  transition: all .8s;
+}
+content .nav_left .exit .exit_log {
+  display: block;
+  width: 1.7vw;
+  height: 1.7vw;
+  margin-right: 1vw;
+  background: url(../images/exit.png) no-repeat;
+  background-size: 100% 100%;
+}
+content .nav_left .exit:hover {
+  opacity: .4;
+}
+content .content {
+  width: 100%;
+  height: 100vh;
+}
+content .content .content_index {
+  float: left;
+  margin-left: 22.5vw;
+  width: 77.5vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #1c4472;
+}

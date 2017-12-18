@@ -1,0 +1,47 @@
+<link rel="stylesheet" media="screen and (min-width:500px)" href="./stylesheets/announce_homework_pc.css"  type="text/css" />
+<link rel="stylesheet" media="screen and (max-width:500px)" href="./stylesheets/announce_homework.css"  type="text/css" />
+<link rel="stylesheet" href="./stylesheets/calendar.css">
+<script src="../javascripts/calendar.js"></script>
+<div class="homework_content">
+    <h1>发布作业</h1>
+    <div class="title">
+       <i></i> <input type="text" placeholder="标题" class="title_val">
+    </div>
+    <div class="time">
+       <i></i> <input type="text" placeholder="截止日期"  onClick="setday(this);" onFocus="setday(this);" class="time_val">
+    </div>
+    <div class="homework_text">
+        <textarea name="" id="" cols="25" rows="10" placeholder="请输入发表的内容" class="content_val"></textarea>
+    </div>
+    <button class="btn">点击提交</button>
+</div>
+<script>
+    var time_val = document.querySelector(".time_val");
+    time_val.addEventListener("click",function() {
+        var meizzDateLayer = document.querySelector("#meizzDateLayer");
+        meizzDateLayer.style.left = "44px";
+        console.log(123);
+    })
+    var currentUser = AV.User.current();
+    var btn = document.querySelector(".btn");
+    var Cont = AV.Object.extend("Group_Redrock_inform");
+    console.log(new Cont());
+    btn.addEventListener("click",function() {
+        var owner = currentUser,
+            // type = "homework",
+            title = document.querySelector(".title_val").value,
+            deadline = document.querySelector(".time_val").value,
+            contents = document.querySelector(".content_val").value;
+            // group = currentUser.
+        var cont = new Cont();
+        cont.set("content",contents);
+        cont.set("title",title);
+        cont.set("deadline",deadline);
+        // cont.set("createTime",new Date());
+        console.log(cont);
+        cont.save().then(function() {
+            alert("success");
+            window.location.href = "./self";
+        })
+    })
+</script>

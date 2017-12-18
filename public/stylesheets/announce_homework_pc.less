@@ -1,0 +1,99 @@
+.homework_content{
+    width: 80%;
+    padding-top: 60px;
+    margin: 0 auto;
+    h1{
+        text-align: center;
+        font-size: 50px;
+        color: rgba(255, 255, 255, .5);
+        font-weight: normal;
+    }
+    .title{
+        display: flex;
+        flex-direction: row nowrap;
+        align-items: center;
+        width: 48%;
+        padding-left: 2%;
+        height: 50px;
+        margin: 32px auto;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, .5);
+        i{
+            display: block;
+            width: 40px;
+            height: 40px;
+            background: url(../images/title.png);
+            background-size: 100% 100%;
+        }
+        input{
+            padding-left: 20px;
+            width: 160px;
+            height: 100%;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            font-size: 20px;
+            color: rgba(255, 255, 255, .5);   
+        }
+    }
+    .time{
+        display: flex;
+        flex-direction: row nowrap;
+        align-items: center;
+        width: 48%;
+        padding-left: 2%;
+        height: 50px;
+        margin: 32px auto;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, .5);
+        i{
+            display: block;
+            width: 30px;
+            height: 30px;
+            background: url(../images/deadline.png);
+            background-size: 100% 100%;
+        }
+        input{
+            padding-left: 30px;
+            width: 160px;
+            height: 100%;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            font-size: 20px;
+            color: rgba(255, 255, 255, .5);   
+        }
+    }
+    .homework_text{
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        textarea{
+            display: block;
+            padding: 18px;
+            font-size: 42px;
+            background-color: transparent;
+            color: rgba(255, 255, 255, .5);
+            border-radius: 8px;
+        }
+    }
+    button{
+        display: block;
+        width: 35%;
+        height: 50px;
+        margin: 30px auto;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, .5); 
+        background-color: rgba(0, 0, 0, .01); 
+        font-size: 13px;
+        color: white;
+        transition: all 0.8s;
+        &:hover{
+            color: rgba(255, 255, 255, .5); 
+            background-color: rgba(0, 0, 0, .3); 
+        }
+    }
+}

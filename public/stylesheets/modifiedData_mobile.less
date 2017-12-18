@@ -1,0 +1,85 @@
+.modifiedData{
+    .user{
+        display: block;
+        width: 20vw;
+        height: 20vw;
+        border-radius: 20vw;
+        margin: 4vw auto;
+        border: 1px solid grey;
+    }
+    .file {
+        position: relative;
+        display: block;
+        width: 16vw;
+        height: 4vw;
+        border-radius: .6vw;
+        padding: .6vw;
+        margin: .2vw auto;
+        overflow: hidden;
+        color: rgb(144, 157, 165);
+        font-size: .5vw;
+        text-align: center;
+        background-color: rgba(255,255,255,.3);
+        input{
+            position: absolute;
+            display: block;
+            height: 2vw;
+            width: 8vw;
+            right: 0;
+            top: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+    }
+    .common{
+        display: flex;
+        flex-direction: row nowrap;
+        width: 30vw;
+        height: 8vw;
+        margin: 3vw auto;
+        i{
+            display: block;
+            width: 5vw;
+            height: 5vw;
+            &.student_name{
+                background: url(../images/student_name.png);
+                background-size: 100% 100%;
+            }
+            &.student_id{
+                background: url(../images/student_id.png);
+                background-size: 100% 100%;
+            }
+            &.class{
+                background: url(../images/class.png);
+                background-size: 100% 100%;
+            }
+            &.email{
+                background: url(../images/email.png);
+                background-size: 100% 100%;
+            }
+            &.num{
+                background: url(../images/num.png);
+                background-size: 100% 100%;
+            }
+        }
+        input{
+            display: block;
+            width: 24.5vw;
+            padding-left: 2vw;
+            height: 5vw;
+            border: none;
+            font-size: 1.5vw;
+            background-color: transparent;
+        }
+    }
+    button{
+        display: block;
+        width: 20vw;
+        height: 6vw;
+        margin: 2vw auto;
+        border: 1px solid grey;
+        background-color: rgba(255, 255, 255, .1);
+        color: white;
+        font-size: 1vw;
+    }
+}

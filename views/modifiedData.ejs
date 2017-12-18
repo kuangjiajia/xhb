@@ -1,0 +1,84 @@
+<link rel="stylesheet" media="screen and (min-width:500px)" href="./stylesheets/modifiedData.css"  type="text/css" />
+<link rel="stylesheet" media="screen and (max-width:500px)" href="./stylesheets/modifiedData_mobile.css"  type="text/css" />
+<div class="modifiedData">
+    <img src="" alt="" class="user">
+    <div class="file">点击上传<input type="file" class="files"></div>
+    <div class="modified_userName common">
+        <i class="student_name"></i><input type="text" placeholder="请输入姓名" id="username">
+    </div>
+    <div class="modified_id common">
+        <i class="student_id"></i><input type="text" placeholder="请输入学号" id="userId">
+    </div>
+    <div class="modified_class common">
+        <i class="class"></i><input type="text" placeholder="请输入班级" id="classRoom">
+    </div>
+    <div class="modified_email common" >
+        <i class="email"></i><input type="text" placeholder="请输入邮箱" id="classEmail">
+    </div>
+    <div class="modified_num common">
+        <i class="num"></i><input type="text" placeholder="请输入电话号码" id="classNumber">
+    </div>
+    <button class="modified">点击修改</button>
+</div>
+<script>
+  var fileInput = document.querySelector('.files'),
+      previewImg = document.querySelector('.user');
+  fileInput.addEventListener('change', function () {
+      var file = this.files[0];
+      var reader = new FileReader();
+      reader.addEventListener("load", function () {
+          previewImg.src = reader.result;
+      }, false);
+      reader.readAsDataURL(file);
+  }, false);
+
+  var modified = document.querySelector(".modified");
+  var currentUser = AV.User.current();
+  var regex = /\w*@\w*/g;
+  var regNum = /\d{11}/g;
+  console.log(currentUser.attributes);
+  var attr = currentUser.attributes;
+  var usernameDom = document.querySelector("#username");
+  var idDom = document.querySelector("#userId");
+  var classRoomDom = document.querySelector("#classRoom");
+  var classEmailDom = document.querySelector("#classEmail");
+  var classNumberDom = document.querySelector("#classNumber");
+  usernameDom.value = attr.user_name || '';
+  idDom.value = attr.user_Id || '';
+  classRoomDom.value = attr.user_class || '';
+  classEmailDom.value = attr.email || '';
+  classNumberDom.value = attr.mobilePhoneNumber || '';
+  previewImg.src = attr.avatar.attributes.url;
+
+  modified.addEventListener("click",function() {
+    var name = usernameDom.value;
+    var id = idDom.value;
+    var classRoom = classRoomDom.value;
+    var classEmail = classEmailDom.value;
+    var classNumber = classNumberDom.value;
+    var files = fileInput.files[0];
+    var avatar = new AV.File('avatar.png', files);
+    console.log(classEmail,classNumber);
+    if(regex.test(classEmail)){
+      if(regNum.test(classNumber)) {
+        currentUser.set("mobilePhoneNumber",classNumber);
+        currentUser.set("email",classEmail);
+        currentUser.set("user_name",name);
+        currentUser.set("user_Id",id);
+        currentUser.set("user_class",classRoom);
+        if(avatar){
+            currentUser.set("avatar",avatar);
+        }
+        currentUser.save().then(function() {
+          alert("保存成功");
+          window.location.href = "./self";
+        })
+      }else{
+        alert("电话号码格式错误");
+      }
+    }else{
+      alert("邮箱格式错误");
+    }
+  })
+
+</script>
