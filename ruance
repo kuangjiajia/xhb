@@ -1,0 +1,84 @@
+
+
+function getType(X) {
+  if(X > 0 && X < 100) {
+    if(X >= 90) {
+      return "优秀";
+    }else if(X >= 80) {
+      return "良好"
+    }else if(X >= 70) {
+      return "一般"
+    }else if(X >= 60) {
+      return "及格"
+    }else{
+      return "不及格"
+    }
+  }else {
+      return "输入错误"
+  }
+}
+
+getType(80)
+
+T1 = X大于等于0
+F1= X小于0 T2 = X小于等于100
+F2= X大于100 T3 = X大于等于90
+F3= X小于90 T4 = X大于等于80
+F4= X小于80 T5 = X大于等于70
+F5= X小于70 T6 = X大于等于60
+F6= X小于60
+1.X大于等于0且小于等于100
+2 .X大于0且大于100
+3.X大于等于90
+4. X小于90
+5.X大于等于80
+6. X小于80
+7.X大于等于70
+8. X小于70
+9.X大于等于60
+10.X小于60
+
+
+
+
+var Person = {
+  circle: new Set([
+    brothers: {
+      name: "psx"
+    },
+    sisters: {
+      name: "zzx"
+    },
+    parents: {
+      name: "北京"
+    },
+    grandparent: {
+      name: "asd"
+    }
+  ]),
+  signature: "xxx",
+  girlfriend: "llp",
+  modifiySignature: function(val) {
+    setTimeout(function() {
+      Object.defineProperty(Person,"signature",{
+          value: val
+      })
+    },1000)
+  }
+}
+
+Object.freeze(Person.girfriend);
+Person.prototype = {
+  del: function() {
+
+  },
+  add: function() {
+
+  },
+  update: function() {
+
+  },
+  check: function() {
+
+  }
+}
